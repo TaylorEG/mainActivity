@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:id="@+id/input_wrapper"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@null"
+            android:layout_weight="0.5">
+
+            <Button
+                android:id="@+id/med_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableTop="@drawable/medication"
+                android:text="Medication"
+                android:drawablePadding="20dp"
+                android:textSize="20sp"
+                android:onClick="inputMed"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@null"
+            android:layout_weight="0.5">
+
+            <Button
+                android:id="@+id/bg_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/blood_glucose"
+                android:text="Blood Glucose"
+                android:drawablePadding="20dp"
+                android:textSize="20sp"
+                android:background="@null"
+                android:onClick="inputBG"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@null"
+            android:layout_weight="0.5">
+
+            <Button
+                android:id="@+id/act_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableTop="@drawable/activity"
+                android:text="Activity"
+                android:drawablePadding="20dp"
+                android:textSize="20sp"
+                android:onClick="inputAct"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@null"
+            android:layout_weight="0.5">
+
+            <Button
+                android:id="@+id/food_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableTop="@drawable/food"
+                android:text="Food"
+                android:drawablePadding="20dp"
+                android:textSize="20sp"
+                android:onClick="inputFood"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.evanlee.g2lbuddyandroid.journalInput">
+    <!-- android:fitsSystemWindows="true" wasn't exist before-->
+
+    <TextView
+        android:id="@+id/activityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity:"
+        android:textSize="20sp"
+        android:layout_marginStart="11dp"
+        />
+
+    <EditText
+        android:id="@+id/activityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_marginLeft="55sp"
+        android:layout_alignBaseline="@id/activityText"
+        android:layout_toEndOf="@id/activityText"
+        android:inputType="text"/>
+
+    <View
+        android:id="@+id/belowActName"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/activityName"
+        />
+
+
+
+    <TextView
+        android:id="@+id/durationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/activityText"
+        android:text="Duration: "
+        android:layout_below="@id/belowActName"
+        android:layout_marginTop="14sp"
+        android:layout_marginBottom="14sp"
+        android:textSize="20sp"
+        />
+
+    <View
+        android:id="@+id/belowActDuration"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/durationText"
+        />
+
+
+    <TextView
+        android:id="@+id/actDateText"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/activityText"
+        android:layout_below="@id/belowActDuration"
+        android:layout_marginTop="14sp"
+        android:text="Date:"
+        android:layout_marginBottom="14sp"
+        />
+
+    <EditText
+        android:id="@+id/durationMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="00"
+        android:layout_marginStart="40sp"
+        android:layout_alignBaseline="@id/durationText"
+        android:layout_toRightOf="@id/durationText"
+        android:inputType="numberSigned" />
+    <TextView
+        android:id="@+id/colonText"
+        android:text=":"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/durationMinutes"
+        android:layout_alignBaseline="@id/durationMinutes"/>
+    <EditText
+        android:id="@+id/durationSeconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="00"
+        android:layout_alignBaseline="@id/durationText"
+        android:layout_toRightOf="@id/colonText"
+        android:inputType="numberSigned"
+        />
+
+    <TextView
+        android:id="@+id/userDate"
+        android:layout_width="200sp"
+        android:width="95sp"
+        android:layout_height="wrap_content"
+        android:hint="Date"
+        android:textSize="20sp"
+        android:onClick="showDatePickerDialog"
+        android:layout_alignLeft="@id/activityName"
+        android:layout_marginTop="105sp"
+        android:layout_toRightOf="@id/actDateText"
+        android:layout_alignBaseline="@id/actDateText"
+        />
+
+    <View
+        android:id="@+id/belowActDate"
+        android:layout_width="wrap_content"
+        android:layout_height="1sp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/actDateText"
+        />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:text="Time: "
+        android:layout_alignStart="@id/activityText"
+        android:textSize="20sp"
+        android:layout_below="@id/actDateText"
+        android:layout_marginTop="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/userTime"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignTop="@id/timeText"
+        android:layout_alignStart="@id/userDate"
+        android:layout_toRightOf="@id/timeText"
+        android:hint="Time"
+        android:onClick="showTimePickerDialog"
+        android:layout_marginLeft="1sp"
+        />
+
+</RelativeLayout>

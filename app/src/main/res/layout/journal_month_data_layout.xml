@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
+
+    <View
+        android:layout_height="1.5dp"
+        android:layout_width="match_parent"
+        android:background="#8b8989"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Month"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/month_display"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Year"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/year_display"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/month_display" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_height="1.5dp"
+        android:layout_width="match_parent"
+        android:background="#8b8989"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/blood"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/month_year"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            app:srcCompat="@drawable/journal_blood"
+            android:id="@+id/blood_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="0"
+            android:textColor="#D63053"
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/blood_data"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/blood_icon" />
+
+        <TextView
+            android:text="AVG Blood Glucose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/blood_title"
+            android:layout_below="@+id/blood_data"
+            android:layout_toRightOf="@+id/blood_icon" />
+
+        <TextView
+            android:text="0"
+            android:textColor="#D63053"
+            android:textSize="15sp"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/highest_reading"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/blood_data" />
+
+        <ImageView
+            android:src="@drawable/journal_blood_high"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@+id/highest_reading"
+            android:id="@+id/highest_reading_icon"
+            android:layout_alignTop="@+id/blood_data"/>
+
+        <TextView
+            android:text="0"
+            android:textColor="#30AED6"
+            android:textSize="15sp"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/lowest_reading"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/highest_reading" />
+
+        <ImageView
+            android:src="@drawable/journal_blood_low"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="2dp"
+            android:id="@+id/lowest_reading_icon"
+            android:layout_below="@+id/highest_reading"
+            android:layout_toLeftOf="@+id/lowest_reading" />
+    </RelativeLayout>
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#90909090"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/activity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            app:srcCompat="@drawable/journal_activity"
+            android:id="@+id/imageView2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="00:00:00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#30AED6"
+            android:textSize="25sp"
+            android:id="@+id/activity_data"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imageView2" />
+
+        <TextView
+            android:text="Activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/imageView2" />
+    </RelativeLayout>
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#90909090"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/food"
+       android:layout_width="match_parent"
+       android:layout_height="50dp">
+
+       <ImageView
+           android:layout_width="45dp"
+           android:layout_height="45dp"
+           android:layout_marginRight="25dp"
+           android:layout_marginLeft="25dp"
+           app:srcCompat="@drawable/journal_carbs"
+           android:id="@+id/imageView4"
+           android:layout_alignParentTop="true"
+           android:layout_alignParentStart="true" />
+
+       <TextView
+           android:text="0"
+           android:textSize="25sp"
+           android:textColor="#FAD937"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/carb_data"
+           android:layout_alignParentTop="true"
+           android:layout_toEndOf="@+id/imageView4" />
+
+       <TextView
+           android:text="Calories"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/textView2"
+           android:layout_alignParentBottom="true"
+           android:layout_toEndOf="@+id/imageView4" />
+   </RelativeLayout>
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#90909090"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/deviation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/blood_dev_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            app:srcCompat="@drawable/journal_blood_dev"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="0"
+            android:textSize="25dp"
+            android:textColor="#D63053"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/blood_dev_data"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/blood_dev_icon" />
+
+        <TextView
+            android:text="Blood Glucose Deviation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/blood_dev_icon"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#90909090"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+</TableLayout>

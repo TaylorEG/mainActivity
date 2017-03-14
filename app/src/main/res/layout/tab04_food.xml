@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.evanlee.g2lbuddyandroid.journalInput">
+
+
+    <TextView
+        android:id="@+id/foodText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food:"
+        android:textSize="20dp"
+        android:layout_marginTop="8sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        />
+
+    <EditText
+        android:id="@+id/foodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:textSize="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@id/foodText"
+        android:inputType="text"
+        />
+
+    <View
+        android:id="@+id/belowFood"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/foodName"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="14dp"
+        />
+
+    <TextView
+        android:id="@+id/calorieText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount:"
+        android:textSize="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@id/belowFood"
+        android:layout_alignStart="@id/foodText"
+        android:layout_alignLeft="@id/foodText"
+        android:layout_marginBottom="14dp"/>
+
+    <EditText
+        android:id="@+id/calorieCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Calorie Count"
+        android:textSize="20dp"
+        android:layout_alignLeft="@id/foodName"
+        android:layout_marginTop="14dp"
+        android:layout_below="@id/foodName"
+        android:layout_toRightOf="@id/calorieText"
+        android:layout_alignBaseline="@id/calorieText"
+        android:inputType="numberSigned"/>
+
+    <View
+        android:id="@+id/belowCalories"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/calorieCount"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="14dp"
+        />
+
+    <TextView
+        android:id="@+id/foodDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Date:"
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@id/belowCalories"
+        android:layout_alignStart="@id/calorieText"
+        android:layout_alignLeft="@id/calorieText"/>
+
+    <TextView
+        android:id="@+id/userDate"
+        android:layout_width="200sp"
+        android:textSize="20sp"
+        android:width="95sp"
+        android:layout_height="wrap_content"
+        android:hint="Date"
+        android:onClick="showDatePickerDialog"
+        android:layout_alignLeft="@id/foodName"
+        android:layout_marginTop="105sp"
+        android:layout_toRightOf="@id/foodDate"
+        android:layout_alignBaseline="@id/foodDate"
+        />
+
+    <View
+        android:id="@+id/belowFoodDate"
+        android:layout_width="wrap_content"
+        android:layout_height="1sp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/foodDate"
+        />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:text="Time: "
+        android:layout_alignStart="@id/foodText"
+        android:textSize="20sp"
+        android:layout_below="@id/foodDate"
+        android:layout_marginTop="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/userTime"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:textColor="@color/grey"
+        android:layout_toRightOf="@id/timeText"
+        android:layout_alignBaseline="@id/timeText"
+        android:layout_alignStart="@id/userDate"
+        android:hint="Time"
+        android:onClick="showTimePickerDialog"
+        android:layout_marginLeft="1sp"
+        />
+</RelativeLayout>

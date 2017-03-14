@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Display Date -->
+    <RelativeLayout
+        android:id="@+id/date_model"
+        android:layout_height="50dp"
+        android:layout_width="match_parent">
+
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="#DEDEDB"/>
+
+        <RelativeLayout
+            android:id="@+id/date_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:text="19"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/day_display"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="January"
+                android:textSize="20dp"
+                android:layout_marginLeft="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/month_display"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/day_display" />
+
+            <TextView
+                android:text="2017"
+                android:textSize="20dp"
+                android:layout_marginLeft="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/year_display"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/month_display" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"/>
+
+
+    <!-- Display Blood Glucose, Total activity, and total carbs consumed -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/blood_avg_section"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/total_activity">
+
+            <RelativeLayout
+                android:id="@+id/blood_section_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:id="@+id/blood_image"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/blood_glucose"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/blood_avg"
+                    android:text="100"
+                    android:textSize="17dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/blood_image" />
+
+                <TextView
+                    android:text="avg."
+                    android:textSize="17dp"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_alignBaseline="@+id/blood_avg"
+                    android:layout_alignBottom="@+id/blood_avg"
+                    android:layout_toEndOf="@+id/blood_avg" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/total_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:id="@+id/activity_section_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:id="@+id/activity_image"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/activity"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/total_activity_sum"
+                    android:text="00:00"
+                    android:textSize="17dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/activity_image" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/total_carbs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/total_activity"
+            android:layout_alignParentRight="true">
+
+            <RelativeLayout
+                android:id="@+id/carb_section_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:id="@+id/carbs_image"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/food"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/carbs_total"
+                    android:text="10"
+                    android:textSize="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/carbs_image" />
+
+                <TextView
+                    android:text="carbs"
+                    android:textSize="15dp"
+                    android:layout_width="38dp"
+                    android:layout_height="20dp"
+                    android:layout_alignBaseline="@+id/carbs_total"
+                    android:layout_alignBottom="@+id/carbs_total"
+                    android:layout_toEndOf="@+id/carbs_total" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#DEDEDB"
+        />
+<!--
+    <ListView
+        android:id="@+id/daily_input_data_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+-->
+
+
+    <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#DEDEDB"
+        />
+
+</TableLayout>

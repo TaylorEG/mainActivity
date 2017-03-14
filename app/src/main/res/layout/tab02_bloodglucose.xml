@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.evanlee.g2lbuddyandroid.journalInput">
+
+    <TextView
+        android:id="@+id/bloodGlucoseText"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5sp"
+        android:layout_marginTop="14sp"
+        android:layout_marginBottom="14sp"
+        android:text="Glucose:"
+        />
+
+    <View
+        android:id="@+id/belowBGNum"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/bloodGlucoseText"
+        />
+
+    <TextView
+        android:id="@+id/bgDateText"
+        android:textSize="20sp"
+        android:layout_marginTop="14sp"
+        android:layout_marginBottom="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/bloodGlucoseText"
+        android:text="Date: "
+        android:layout_below="@id/belowBGNum"
+        />
+    <View
+        android:id="@+id/belowBGDate"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/bgDateText"
+        />
+
+
+    <EditText
+        android:id="@+id/bloodGlucoseNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/bloodGlucoseText"
+        android:layout_toEndOf="@id/bloodGlucoseText"
+        android:textSize="20sp"
+        android:hint="mg/dL"
+        android:layout_marginLeft="25sp"
+        android:inputType="numberSigned" />
+
+
+
+    <TextView
+        android:id="@+id/userDate"
+        android:layout_width="200sp"
+        android:width="95sp"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:hint="Date"
+        android:onClick="showDatePickerDialog"
+        android:layout_toRightOf="@id/bgDateText"
+        android:layout_alignBaseline="@id/bgDateText"
+        android:layout_marginLeft="50sp"
+        android:layout_marginTop="105sp"
+        />
+
+
+    <TextView
+        android:id="@+id/timeText"
+        android:text="Time: "
+        android:layout_alignStart="@id/nameText"
+        android:textSize="20sp"
+        android:layout_below="@id/bgDateText"
+        android:layout_marginTop="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/userTime"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@id/timeText"
+        android:layout_toRightOf="@id/timeText"
+        android:layout_alignStart="@id/userDate"
+        android:hint="Time"
+        android:onClick="showTimePickerDialog"
+        android:layout_marginLeft="1sp"
+        />
+
+</RelativeLayout>

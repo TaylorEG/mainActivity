@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.evanlee.g2lbuddyandroid.journalInput">
+
+
+    <EditText
+        android:id="@+id/medName"
+        android:hint="Medication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginLeft="150sp"
+        android:layout_marginRight="15sp"
+        android:layout_alignParentTop="true"
+        />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textSize="20sp"
+        android:layout_marginTop="8sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"/>
+
+    <TextView
+        android:id="@+id/amountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount:"
+        android:textSize="20sp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/belowName"
+        android:layout_alignStart="@+id/nameText"
+        android:layout_alignLeft="@id/nameText"
+        android:layout_marginBottom="14dp"/>
+
+    <TextView
+        android:id="@+id/medDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Date:"
+        android:layout_marginBottom="14sp"
+        android:layout_marginTop="14sp"
+        android:layout_below="@+id/belowAmount"
+        android:layout_alignStart="@id/amountText"
+        android:layout_alignLeft="@id/amountText"/>
+
+    <View
+        android:id="@+id/belowName"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/medName"
+        />
+
+    <View
+        android:id="@+id/belowMedDate"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/medDate"
+        />
+
+
+
+
+    <EditText
+        android:id="@+id/medAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Number"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@id/amountText"
+        android:layout_alignStart="@id/medName"
+        android:layout_alignLeft="@id/medName"
+        android:inputType="numberSigned" />
+    <View
+        android:id="@+id/belowAmount"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/amountText"
+        />
+
+    <!--  <View
+          android:id="@+id/bySpinner"
+          android:layout_width="1dp"
+          android:layout_height="wrap_content"
+          android:layout_alignTop="@id/belowName"
+          android:layout_alignBottom="@id/belowAmount"
+          />
+      android:layout_alignLeft="@id/spinner"
+      android:layout_alignStart="@id/spinner"
+      -->
+
+
+    <TextView
+        android:id="@+id/userDate"
+        android:width="95sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/medDate"
+        android:textSize="20sp"
+        android:hint="Date"
+        android:onClick="showDatePickerDialog"
+        android:layout_marginLeft="150sp"
+        android:layout_marginTop="105sp"
+        android:layout_width="200sp" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:text="Time: "
+        android:layout_alignStart="@id/nameText"
+        android:textSize="20sp"
+        android:layout_below="@id/medDate"
+        android:layout_marginTop="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/userTime"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@id/timeText"
+        android:layout_toRightOf="@id/timeText"
+        android:layout_alignStart="@id/userDate"
+        android:hint="Time"
+        android:onClick="showTimePickerDialog"
+
+        />
+
+    <Spinner
+        android:id="@+id/medUnit"
+        android:layout_height="50sp"
+        android:textSize="12sp"
+        android:layout_alignTop="@+id/belowName"
+        android:layout_alignParentEnd="true"
+        android:layout_width="95sp">
+    </Spinner>
+
+</RelativeLayout>
+    <!--
+        <View
+            android:id="@+id/med_timePickerView"
+            android:clickable="true"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/medDate"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="63sp"
+            android:layout_marginRight="63sp"
+            android:onClick="showDatePickerDialog"/>
+            -->

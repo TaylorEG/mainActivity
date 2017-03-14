@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">g2lbuddyandroid</string>
+    <string name="title_activity_journal_input">journalInput</string>
+    <string name="action_settings">Settings</string>
+    <string name="pick_time">Select Time</string>
+    <string name="save">Save</string>
+    <string-array name="medicineUnits">
+        <item>Unit</item>
+        <item>Mg</item>
+        <item>Ml</item>
+    </string-array>
+</resources>
